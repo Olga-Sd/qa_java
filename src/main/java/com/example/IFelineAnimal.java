@@ -1,2 +1,13 @@
-package com.example;public interface IFelineAnimal {
+package com.example;
+
+import java.util.List;
+
+public interface IFelineAnimal {
+    public int getKittens();
+
+    public int getKittens(int kittensCount);
+
+    List<String> eatMeat() throws Exception;
+
+    //List<String> eatMeat() throws Exception;
 }
