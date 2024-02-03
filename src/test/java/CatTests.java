@@ -1,6 +1,5 @@
 import com.example.Cat;
 import com.example.Feline;
-import com.example.Predator;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -13,7 +12,7 @@ import java.util.List;
 import static org.junit.Assert.assertEquals;
 
 // в классе написаны тесты для простого тестирования и
-// тестирование с помощью моков так как хотелось опробовать оба способа
+// тестирование с помощью мока так как хотелось опробовать оба способа
 @RunWith(MockitoJUnitRunner.class)
 public class CatTests {
 
@@ -41,7 +40,7 @@ public class CatTests {
         List<String> expectedFood = List.of("Животные", "Птицы", "Рыба");
         assertEquals(expectedFood, cat.getFood());
     }
-
+// Тест с моком.
     @Test
     public void testGetFoodWithMock() throws Exception {
         List<String> expectedFood = List.of("Животные", "Птицы", "Рыба");
