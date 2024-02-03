@@ -6,13 +6,16 @@ import static org.junit.Assert.assertEquals;
 
 import java.util.List;
 
+// В данном классе тестируется метод getFood класса Animal
+//  с помощью параметризованных тестов
+// В классе AnimalTest находятся не параметризованные тесты для класса Animal
 @RunWith(Parameterized.class)
-public class AnimalTestsParametrized {
+public class TestAnimalParametrized {
 
     private final String animalKind;
     private final List<String> animalFood;
 
-    public AnimalTestsParametrized(String animalKind,List<String> animalFood){
+    public TestAnimalParametrized(String animalKind, List<String> animalFood){
         this.animalKind = animalKind;
         this.animalFood = animalFood;
     }
@@ -31,6 +34,4 @@ public class AnimalTestsParametrized {
         assertEquals(animalFood, animal.getFood(animalKind));
         }
     }
-
-
 
